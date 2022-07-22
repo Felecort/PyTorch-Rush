@@ -11,4 +11,5 @@ dataset
 *.json
 *.jpg
 *.png
+*.csv
 *checkpoint.ipynb
