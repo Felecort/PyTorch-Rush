@@ -10,6 +10,7 @@ dataset
 *.html
 *.json
 *.jpg
+*.jpeg
 *.png
 *.csv
 *checkpoint.ipynb
