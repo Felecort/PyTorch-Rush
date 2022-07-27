@@ -1,11 +1,22 @@
-from itertools import permutations as pm
-from math import ceil
+from functools import reduce
+from operator import mul
 
-def middle_permutation(s):
-    perm = (["".join(rep) for rep in ((pm(s)))])
-    return perm[ceil(len(perm) / 2)]
+def primfacs(n):
+    i = 2
+    primfac = []
+    while i * i <= n:
+        while n % i == 0:
+            primfac.append(i)
+            n = n / i
+        i = i + 1
+    if n > 1:
+        primfac.append(n)
+    return set(primfac)
 
+
+def proper_fractions(n):
+    if n == 1: return 0
+    return int(n * reduce(mul, [1 - 1/x for x in primfacs(n)]))
 
 if __name__ == "__main__":
-    string = "abc"
-    print(middle_permutation(string))
+    print(proper_fractions(2))
