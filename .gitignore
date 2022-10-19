@@ -5,6 +5,7 @@ catboost_info
 venv
 dataset
 runs
+data
 
 #  File extensions
 *.xlsx
